@@ -53,19 +53,24 @@ public class GameManager : MonoBehaviour {
 
     void OnGUI()
     {
-        GUILayout.BeginArea(new Rect(Screen.width / 2, 50, 200, 500));
-
-        GUILayout.BeginVertical();
-
-        GUILayout.Box(playerList_Background);
-        foreach (string id in players.Keys)
+        if(players.Keys.Count > 0)
         {
-            GUILayout.Label(id + "  -  " + players[id].transform.name);
+            GUILayout.BeginArea(new Rect(Screen.width / 2, 50, 200, 500));
+
+            GUILayout.BeginVertical();
+
+
+            GUILayout.Box(playerList_Background);
+            foreach (string id in players.Keys)
+            {
+                GUILayout.Label(id + "  -  " + players[id].transform.name);
+            }
+
+            GUILayout.EndVertical();
+
+            GUILayout.EndArea();
         }
-
-        GUILayout.EndVertical();
-
-        GUILayout.EndArea();
+        
     }
 
     #endregion
