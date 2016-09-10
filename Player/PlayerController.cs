@@ -43,14 +43,15 @@ public class PlayerController : MonoBehaviour {
             return;
         }
 
-        if (!Input.GetKeyDown(KeyCode.LeftControl))
+        if (Input.GetKeyDown(KeyCode.LeftControl))
         {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = true;
-        }else
+            if (MouseShow.isOn == false)
+                MouseShow.isOn = true;
+        }
+        else
         {
-            Cursor.lockState = CursorLockMode.Confined;
-            Cursor.visible = true;
+            if (MouseShow.isOn == true)
+                MouseShow.isOn = false;
         }
 
         //Calculate Movement Velocity as a 3D Vector
