@@ -53,7 +53,6 @@ public class GameManager : MonoBehaviour {
 
     void OnGUI()
     {
-        GUI.skin = skin;
         GUILayout.BeginArea(new Rect(Screen.width / 2, 50, 200, 500));
 
         GUILayout.BeginVertical();
