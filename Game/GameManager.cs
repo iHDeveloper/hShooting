@@ -58,12 +58,12 @@ public class GameManager : MonoBehaviour {
             GUILayout.BeginArea(new Rect(Screen.width / 2, 50, 200, 500));
 
             GUILayout.BeginVertical();
-
+            GUILayout.Label("Players List:");
             foreach (string id in players.Keys)
             {
                 GUI.skin.label.normal.background = playerList_Background;
-
-                GUILayout.Label(id + "  -  " + players[id].transform.name);
+                GUI.skin.label.normal.textColor = Color.red;
+                GUILayout.Label(players[id].transform.name);
             }
 
             GUILayout.EndVertical();
