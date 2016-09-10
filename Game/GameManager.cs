@@ -50,6 +50,10 @@ public class GameManager : MonoBehaviour {
     [Header("GUI Settings:")]
     [SerializeField]
     private GUISkin skin;
+    
+    [Header("Player List Settings:")]
+    [SerializeField]
+    private Texture playerList_Background;
 
     void OnGUI()
     {
@@ -58,6 +62,7 @@ public class GameManager : MonoBehaviour {
 
         GUILayout.BeginVertical();
 
+        GUILayout.Box(playerList_Background);
         foreach (string id in players.Keys)
         {
             GUILayout.Label(id + "  -  " + players[id].transform.name);
