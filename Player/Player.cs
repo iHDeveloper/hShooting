@@ -184,7 +184,7 @@ public class Player : NetworkBehaviour {
 
     void Update()
     {
-        if (!isLocalPlayer)
+        if (isLocalPlayer)
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
