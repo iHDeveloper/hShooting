@@ -26,6 +26,7 @@ public void RefreshInternetMatch()
 public void ClearMatchList()
 private void OnInternetMatchList(ListMatchResponse matchListResponse)
 ```
+
 > ***Pause Menu :***
 - **Information :**
 - This Class is If The Player Click (ESC) Than Pause The Controller
@@ -36,7 +37,17 @@ void Update()
 public void LeaveRoom()
 void OnDrop(BasicResponse res)
 ```
+> ***Room Script :***
+- **Information :**
+- This is Class is For Room Item With Events (Ex: OnClick(), more..)
+- **Methods :**
+```
+public void Setup()
+void OnGUI()
+public void Join()
+public void OnJoinMatch(JoinMatchResponse res)
+```
 
 
-
+## Game Link: http://hshot.pe.hu/ 
 ##### README Version: V1.1.1
