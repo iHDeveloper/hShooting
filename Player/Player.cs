@@ -12,7 +12,7 @@ public class Player : NetworkBehaviour {
     [SerializeField]
     private TextMesh nameShow;
 
-    [Header("GUI[DashBoaed] :")]
+    [Header("GUI[DashBoard] :")]
     [SerializeField]
     private Texture HealthIcon;
     [SerializeField]
@@ -192,20 +192,10 @@ public class Player : NetworkBehaviour {
                 {
                     PauseMenu.IsOn = true;
                     Debug.Log("IsOn : " + PauseMenu.IsOn);
-                    GameObject obj = GameObject.Find("PauseUI");
-                    if (!obj.active)
-                    {
-                        obj.SetActive(true);
-                    }
                 }
                 else
                 {
                     PauseMenu.IsOn = false;
-                    GameObject obj = GameObject.Find("PauseUI");
-                    if (obj.active)
-                    {
-                        obj.SetActive(false);
-                    }
                 }
             }
         }
