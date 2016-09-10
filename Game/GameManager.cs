@@ -47,10 +47,6 @@ public class GameManager : MonoBehaviour {
         return players[id];
     }
     
-    [Header("GUI Settings:")]
-    [SerializeField]
-    private GUISkin skin;
-    
     [Header("Player List Settings:")]
     [SerializeField]
     private Texture playerList_Background;
