@@ -93,7 +93,7 @@ public class Player : NetworkBehaviour {
             GUI.Label(rectPoints, points.ToString());
             GUI.skin.label.fontSize = 25;
             GUI.DrawTexture(rectIconReload, ReloadIcon);
-            if (shoot.reloaded == true)
+            if (shoot.weapon.reloaded == true)
             {
                 GUI.skin.label.normal.textColor = Color.green;
                 GUI.Label(rectReload, "Reloaded");
