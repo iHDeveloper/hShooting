@@ -74,4 +74,17 @@ public class GameManager : MonoBehaviour {
     }
 
     #endregion
+
+    #region Overrides 
+
+    void Update()
+    {
+        if(players.Keys.Count == 0)
+        {
+            MouseShow.isOn = false;
+        }
+    }
+
+    #endregion
+
 }
